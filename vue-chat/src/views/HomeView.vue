@@ -6,7 +6,7 @@
   >
     <!-- grid item -->
     <SideBar />
-    <template v-if="Object.keys(contactState.contactSelect).length">
+    <template v-if="isContactExist">
       <!-- messages  -->
       <MessageBoard />
     </template>
@@ -35,7 +35,7 @@
 import SideBar from "../components/sidebar/SideBar.vue";
 import MessageBoard from "../components/message/MessageBoard.vue";
 import { useAuthStore } from "../stores/authUser";
-import { onBeforeMount } from "vue";
+import { onBeforeMount, computed } from "vue";
 import { useContactStore } from "../stores/contact";
 // import ky from "ky";
 
@@ -49,6 +49,9 @@ onBeforeMount(() => {
   authStore.getAuthUser();
 });
 
+const isContactExist = computed(() => {
+  return Object.keys(contactState.contactSelect.value).length;
+})
 // watchEffect(async () => {
 //   const resp = await authStore.getAuhUser();
 //   authStore.setUser(resp);
