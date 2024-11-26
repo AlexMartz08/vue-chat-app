@@ -26,8 +26,6 @@ export const useAuthStore = defineStore("user", {
         router.push("/login");
       }
     },
-    // setUser(user) {
-    //   this.user = user;
-    // },
   },
+  
 });
