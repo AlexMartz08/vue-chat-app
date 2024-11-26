@@ -52,8 +52,4 @@ onBeforeMount(() => {
 const isContactExist = computed(() => {
   return Object.keys(contactState.contactSelect.value).length;
 })
-// watchEffect(async () => {
-//   const resp = await authStore.getAuhUser();
-//   authStore.setUser(resp);
-// });
 </script>
