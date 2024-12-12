@@ -16,13 +16,11 @@
           <h2 class="mt-6 text-center text-2xl font-extralight text-gray-900">
             Sign in to your account
           </h2>
-          <!-- <p class="mt-2 text-center text-sm text-gray-600"> -->
           <router-link
             class="text-center block mt-2 font-medium text-emerald-600 hover:text-emerald-500"
             to="/register"
             >or create an account?</router-link
           >
-          <!-- </p> -->
         </div>
 
         <!-- form  :validation-schema="schema"-->
